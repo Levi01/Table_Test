@@ -1,0 +1,112 @@
+<style type="text/css">
+  }
+
+  table.tg {
+    border-collapse: collapse;
+    align-self: auto;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 1px;
+    word-break: normal;
+    border-color: black;
+    border-radius: 5px;
+    width: 33px;
+    height: 33px;
+    padding: 3em;
+  }
+
+  .tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: black;
+    border-radius: 5px;
+    background-color: blueviolet;
+  }
+
+  .tg .tg-yw4l {
+    vertical-align: top;
+  }
+
+  #table1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 120px;
+    margin-top: 5%;
+  }
+</style>
+<div>
+  <table class="tg" id="table1">
+    <tr>
+      <th class="tg-yw4l" colspan="5" id="header">Month</th>
+    </tr>
+    <tr>
+      <td class="tg-yw4l" id="Monday"></td>
+      <td class="tg-yw4l" id="Tuesday"></td>
+      <td class="tg-yw4l" id="Wednesday"></td>
+      <td class="tg-yw4l" id="Thursday"></td>
+      <td class="tg-yw4l" id="Friday"></td>
+    </tr>
+    <tr>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+    </tr>
+    <tr>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+    </tr>
+    <tr>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+      <td class="tg-yw4l"></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  window.onload = function () {
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var date = new Date();
+
+    document.getElementById('header').innerHTML = months[date.getMonth()] + ' ' + date.getFullYear();
+  };
+  if (new Date().getHours() > 12) {
+    document.getElementById("header").innerHTML = "Good Afternoon!";
+  }
+
+  
+  var getMonthDays = function(month,year) {
+ return new Date(year, month, 0).getDate();
+};
+// use getMonthDays to find number of days in month i.e. console.log(getMonthDays(1, 2012));
+
+var i = 0;
+for (i = 0; i > getMonthDays(date); i++) { 
+    console.log(i);
+}
+
+console.log(getMonthDays);
+
+
+</script>
